@@ -3,13 +3,14 @@ require: slotfilling/slotFilling.sc
 theme: /
 
     state: Start
+        event: speechNotRecognized
         q!: $regex</start>
         q!: (привет*/здравствуй*)
-        random:
+        random: 
             a: Начнём.
             a: Привет.
         a: Помочь, хорошо?
-        
+
         state: Yes
             q: * (да/давай*) *
             a: ок
